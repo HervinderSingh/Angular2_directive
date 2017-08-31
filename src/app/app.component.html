@@ -1,3 +1,27 @@
-<h1>
-  {{title}}
+<h1 dirHighlight [defaultColor]="'red'" [HighlightColor]="'blue'">
+    {{title}}
 </h1>
+
+<div *ngIf="switch">
+    Conditional text
+</div>
+<template [ngIf]="switch">
+<div>
+  conditinal text
+</div>
+</template>
+<button (click)="onSwitch()"></button>
+
+<hr>
+<ul>
+    <li *ngFor="let item of items; let i= index">{{item}}- index {{i}}</li>
+</ul>
+
+<hr>
+
+
+
+<div *unless="switch">
+    conditinal text
+
+</div>

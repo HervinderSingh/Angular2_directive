@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dir works!';
+
+  private switch = true;
+  onSwitch(){
+
+    this.switch = !this.switch;
+  }
+private items=[0,2,1,2,3];
 }
